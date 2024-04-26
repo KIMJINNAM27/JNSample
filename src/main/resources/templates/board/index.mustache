@@ -1,0 +1,21 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">タイトル</th>
+        <th scope="col">内容</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#boardList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/board/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/boardList}}
+    </tbody>
+</table>
+<a href="/board/new">投稿</a>
+{{>layouts/footer}}

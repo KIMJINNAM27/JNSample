@@ -1,0 +1,26 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">タイトル</th>
+        <th scope="col">内容</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#board}}
+    <tr>
+        <th>{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    {{/board}}
+    </tbody>
+</table>
+
+<a href="/board">リストへ戻る</a>
+<a href="/board/{{board.id}}/edit" class="btn btn-primary font-weight-bold">修正</a>
+<a href="/board/{{board.id}}/delete" class="btn btn-danger font-weight-bold">削除</a>
+
+{{>layouts/footer}}
